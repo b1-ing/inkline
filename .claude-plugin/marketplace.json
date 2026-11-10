@@ -1,0 +1,16 @@
+{
+  "name": "inkline",
+  "owner": { "name": "Inkline" },
+  "description": "Inkline: a quiet, single-column, monospace design style for personal and project sites.",
+  "plugins": [
+    {
+      "name": "inkline",
+      "source": ".",
+      "description": "Design skill for the Inkline style: Space Mono, one column, one accent, hairlines, numbered sections.",
+      "version": "1.0.0",
+      "category": "design",
+      "tags": ["design", "portfolio", "frontend", "style", "monospace"],
+      "license": "MIT"
+    }
+  ]
+}

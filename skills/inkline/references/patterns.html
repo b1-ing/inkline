@@ -1,0 +1,84 @@
+<!doctype html>
+<!-- Inkline: canonical markup for each pattern. Uses assets/tokens.css. Placeholder content in [brackets]. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Inkline patterns</title>
+<link rel="stylesheet" href="../assets/tokens.css">
+</head>
+<body>
+
+<!-- NAV: initials left, mono links right, theme toggle. Same 720px column as everything else. -->
+<header style="border-bottom: 1px solid var(--border)">
+  <nav class="column" style="height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap">
+    <a href="#top" style="font-size: 20px; font-weight: 700">[AB]</a>
+    <div style="display: flex; align-items: center; gap: 28px; font-size: 13px; letter-spacing: .02em">
+      <a href="#work">Work</a><a href="#contact">Contact</a>
+      <button aria-label="Toggle dark mode" style="width: 44px; height: 44px; border: 1px solid var(--border); background: transparent; color: var(--text); border-radius: 22px">◐</button>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO: text column + optional round photo, staggered .rise entrance. -->
+<section id="top" class="column" style="padding-top: 104px; padding-bottom: 88px; display: flex; flex-wrap: wrap; align-items: center; gap: 40px">
+  <div style="flex: 999 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+    <p class="meta rise" style="margin: 0">[City] · [Role] · [Year]</p>
+    <h1 class="rise" style="margin: 0; font-size: 52px; line-height: 1.1; letter-spacing: -.03em; animation-delay: 120ms">[Full Name]</h1>
+    <p class="rise" style="margin: 0; font-size: 18px; line-height: 1.6; max-width: 56ch; animation-delay: 240ms">[One-line thesis with <span style="color: var(--accent)">one key phrase</span> in accent.]</p>
+    <p class="rise" style="margin: 0; color: var(--muted); animation-delay: 360ms">[Three-sentence summary in first person.]</p>
+    <div class="rise" style="display: flex; gap: 24px; font-size: 15px; font-weight: 700; animation-delay: 600ms">
+      <a href="#" style="color: var(--accent)">Email</a><a href="#" style="color: var(--accent)">GitHub</a>
+    </div>
+  </div>
+  <figure class="rise" style="flex: 1 1 180px; max-width: 220px; margin: 0; animation-delay: 300ms">
+    <div style="aspect-ratio: 1; border-radius: 50%; border: 1px dashed var(--muted); background: var(--surface)"></div>
+  </figure>
+</section>
+
+<main class="column">
+  <!-- SECTION HEADER: muted number + bold heading. Sections separated by a hairline. -->
+  <section id="work" style="padding: 48px 0; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 36px">
+    <div style="display: flex; align-items: baseline; gap: 16px">
+      <span class="meta">01</span>
+      <h2 style="margin: 0; font-size: 26px; letter-spacing: -.02em">[Section]</h2>
+    </div>
+
+    <!-- ENTRY: 140px date column; stacks on narrow screens via flex-wrap. -->
+    <div style="display: flex; flex-wrap: wrap; gap: 8px 24px">
+      <p class="meta" style="margin: 0; flex: 0 0 var(--date-col); padding-top: 3px">[Jun – Aug 2026]</p>
+      <div style="flex: 999 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 8px">
+        <h3 style="margin: 0; font-size: 17px">[Role or title]</h3>
+        <p style="margin: 0">[One sentence on what was built and why.]</p>
+        <!-- STAT ROW: numbers carry the brag, in accent. -->
+        <p style="margin: 0; font-size: 13px"><span class="stat">[3]</span> agents · <span class="stat">[90%]</span> correctness</p>
+        <p style="margin: 0; font-size: 14px; color: var(--muted)">[Tool · Tool · Tool]</p>
+      </div>
+    </div>
+
+    <!-- FINDING-LED ENTRY (research): the result sentence in italic, then bullets and tags. -->
+    <article style="display: flex; flex-direction: column; gap: 12px">
+      <h3 style="margin: 0; font-size: 18px">[Project]</h3>
+      <p class="meta" style="margin: 0">[Institution · dates]</p>
+      <p style="margin: 4px 0 0; font-size: 17px; font-style: italic">[The finding, written as a result.]</p>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap"><span class="tag">[Tag]</span><span class="tag">[Tag]</span></div>
+    </article>
+
+    <!-- LIST ROW (awards etc.): hairline-separated rows with the same date column. -->
+    <div>
+      <div style="display: flex; flex-wrap: wrap; gap: 4px 24px; padding: 14px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border)">
+        <span class="meta" style="flex: 0 0 var(--date-col)">[2026]</span>
+        <div style="flex: 999 1 400px; min-width: 0"><p style="margin: 0; font-weight: 700">[Award]</p><p style="margin: 0; font-size: 14px; color: var(--muted)">[Why]</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT: muted line + big accent email. -->
+  <section id="contact" style="padding: 80px 0 48px; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 20px">
+    <p style="margin: 0; color: var(--muted)">[What you're open to.]</p>
+    <a href="#" style="font-size: 30px; font-weight: 700; line-height: 1.3; color: var(--accent); overflow-wrap: anywhere">[name@example.com]</a>
+  </section>
+</main>
+<footer style="border-top: 1px solid var(--border); padding: 24px 0"><p class="column meta" style="margin: 0 auto; font-size: 12px">© [Year] [Name]</p></footer>
+</body>
+</html>

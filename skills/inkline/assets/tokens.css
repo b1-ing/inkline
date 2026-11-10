@@ -1,0 +1,48 @@
+/* Inkline: design tokens. Copy into a project's global stylesheet. */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  --bg: #FAFAF7;
+  --surface: #FFFFFF;
+  --text: #1A1A1A;
+  --muted: #5E5E59;
+  --border: #E6E4DE;
+  --accent: #1F4FD8;
+  --accent-soft: #E8EEFC;
+  --attention: #C2410C; /* rare second accent: warnings, "the odd one out" */
+
+  --font: 'Space Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --column: 720px;
+  --gutter: 24px;
+  --date-col: 140px;
+  --radius: 10px;
+  --ease-rise: cubic-bezier(.2, .7, .2, 1);
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0F1115; --surface: #171A20; --text: #E8E6E1; --muted: #A3A097;
+    --border: #2A2E36; --accent: #7FA2FF; --accent-soft: #1C2540;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0F1115; --surface: #171A20; --text: #E8E6E1; --muted: #A3A097;
+  --border: #2A2E36; --accent: #7FA2FF; --accent-soft: #1C2540;
+  color-scheme: dark;
+}
+
+body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--font); font-size: 15px; line-height: 1.7; }
+a { color: inherit; text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 4px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+.column { max-width: var(--column); margin: 0 auto; padding: 0 var(--gutter); }
+.meta { font-size: 13px; letter-spacing: .02em; color: var(--muted); }
+.tag { font-size: 12px; padding: 2px 10px; border-radius: 12px; background: var(--accent-soft); }
+.stat { color: var(--accent); }
+
+@keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.rise { animation: rise .8s var(--ease-rise) both; }
+@media (prefers-reduced-motion: reduce) { .rise { animation: none !important; } }
